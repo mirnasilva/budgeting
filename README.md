@@ -20,72 +20,80 @@ Other types of tests like unit tests, performance tests and integration tests ar
 
 #### 4.1 Positive Test Scenarios
 
-##### Scenario 1: Verify initial page elements on Budget Page
-
+``` .feature
+Scenario: Verify initial page elements on Budget Page
 Given I navigate to Budget page
 Then I should see buttons "Budget" and "Reports" at the top of the page
 And I should see Budget Table
 And I should see Working Balance container
+```
 
-##### Scenario 2: Verify that user can add a new expense entry
-
+``` .feature
+Scenario: Verify that user can add a new expense entry
 Given I navigate to Budget page
 When I add a new expense entry
 Then I should see the new expense added to the Budget table
 And I should see the Working Balance and Total Outflow amount updated
+```
 
-##### Scenario 3: Verify each new expense added will automatically be a negative value
-
+``` .feature
+Scenario: Verify each new expense added will automatically be a negative value
 Given I navigate to Budget page
 When I add a new expense entry with negative value
 Then I should see a negative value for that entry in the Budget table
 When I add a new expense entry with positive value
 Then I should see a negative value for that entry in the Budget table
+```
 
-##### Scenario 4: Verify that user can add a new income entry
-
+``` .feature
+Scenario: Verify that user can add a new income entry
 Given I navigate to Budget page
 When I add a new income entry
 Then I should see the new income added to the Budget table
 And I should see the Working Balance and Total Inflow amount updated
+```
 
-##### Scenario 5: Verify each new income added will automatically be a positive value
-
+``` .feature
+Scenario: Verify each new income added will automatically be a positive value
 Given I navigate to Budget page
 When I add a new income entry with negative value
 Then I should see a positive value for that entry in the Budget table
 When I add a new income entry with positive value
 Then I should see a positive value for that entry in the Budget table
+```
 
-##### Scenario 6: Verify that the calculation of the Total Inflow, Total Outflow and Working Balance are correct
-
+``` .feature
+Scenario: Verify that the calculation of the Total Inflow, Total Outflow and Working Balance are correct
 Given I navigate to Budget page
 When I add a new income entry
 And I add a new expense entry
 Then I should see the Total Inflow as the sum of all incomes on the Budget table
 And I should see the Total Outflow as the sum of all expenses on the Budget table
 And I should see the Working Balance as the result of Total Inflow minus Total Outflow
+```
 
-##### Scenario 7: Delete an existing entry
-
+``` .feature
+Scenario: Delete an existing entry
 Given I navigate to Budget page
 When I add a new income entry
 Then I should see the new income added to the Budget table
 When I select any entry on the Budget table
 And I delete the selected entry
 Then I should not see that entry on the Budget table
+```
 
-##### Scenario 8: Update an existing entry
-
+``` .feature
+Scenario: Update an existing entry
 Given I navigate to Budget page
 When I add a new income entry
 Then I should see the new income added to the Budget table
 When I select any entry on the Budget table
 And I update the description on the selected entry
 Then I should see that entry with updated description on the Budget table
+```
 
-##### Scenario 9: Verify initial page elements on Reports Page
-
+``` .feature
+Scenario: Verify initial page elements on Reports Page
 Given I navigate to Reports page
 Then I should see buttons "Budget" and "Reports" at the top of the page
 And I should see "Inflow vs Outflow" and "Spending by Category" tabs
@@ -93,54 +101,62 @@ When I select "Inflow vs Outflow" tab
 Then I should see a graph
 When I select "Spending by Category" tab
 Then I should see a graph
+```
 
-##### Scenario 10: Verify that "Inflow vs Outflow" graph is displaying the correct values and expenses distribution
-
+``` .feature
+Scenario: Verify that "Inflow vs Outflow" graph is displaying the correct values and expenses distribution
 Given I navigate to Reports page
 When I select "Inflow vs Outflow" tab
 Then I should see a graph with "Inflow" and "Outflow" columns
 And the "Inflow" column should have the same amount as the Total Inflow in the Budget page
 And the "Outflow" column should have the same amount as the Total Outflow in the Budget page
 And the "Categories" listed should be the same as the ones in the Budget page
+```
 
-##### Scenario 11: Verify that "Spending by Category" graph is displaying the correct values and expenses distribution
-
+``` .feature
+Scenario: Verify that "Spending by Category" graph is displaying the correct values and expenses distribution
 Given I navigate to Reports page
 When I select "Spending by Category" tab
 Then I should see a graph with expenses categories
 And I should see that each category have the same amount listed in the Budget page
+``` 
 
 #### 4.2 Negative Test Scenarios
 
-##### Scenario 1: Verify that alphanumeric values cannot be added into value field
-
+``` .feature
+Scenario: Verify that alphanumeric values cannot be added into value field
 Given I navigate to Budget page
 When I try to add a new income entry with alphanumeric values on "value" field
 Then I should not be able to add this entry
+```
 
-##### Scenario 2: Verify that user can't add a new entry with empty value
-
+``` .feature
+Scenario: Verify that user can't add a new entry with empty value
 Given I navigate to Budget page
 When I try to add a new income entry with "value" field empty
 Then I should not be able to add this entry
+```
 
-##### Scenario 3: Verify that user can't add a new income with negative value
-
+``` .feature
+Scenario: Verify that user can't add a new income with negative value
 Given I navigate to Budget page
 When I try to add a new income entry with a negative number on "value" field
 Then I should see the new income added to the Budget table with positive value
+```
 
-##### Scenario 4: Verify that user can't add a new expense with positive value
-
+``` .feature
+Scenario: Verify that user can't add a new expense with positive value
 Given I navigate to Budget page
 When I try to add a new expense entry with a positive number on "value" field
 Then I should see the new expense added to the Budget table with negative value
+```
 
-##### Scenario 5: Verify that user can't edit the Total Inflow, Total Outflow and Working Balance fields
-
+``` .feature
+Scenario: Verify that user can't edit the Total Inflow, Total Outflow and Working Balance fields
 Given I navigate to Budget page
 When I try to edit the fields "Total Inflow", "Total Outflow" and "Working Balance"
 Then I should not be able to change the values on it
+```
 
 ## Javascript Test Automation
 
