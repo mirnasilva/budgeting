@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:8000",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "chromeWebSecurity": false,
+  "ignoreTestFiles": ["*.js", "*.md"],
+  "testFiles": "**/*.feature"
+}

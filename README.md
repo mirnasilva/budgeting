@@ -1,165 +1,221 @@
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FModusCreateOrg%2Fbudgeting-sample-app-webpack2.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FModusCreateOrg%2Fbudgeting-sample-app-webpack2?ref=badge_shield)
-[![CircleCI](https://circleci.com/gh/ModusCreateOrg/budgeting.svg?style=svg)](https://circleci.com/gh/ModusCreateOrg/budgeting)
-[![Coverage Status](https://coveralls.io/repos/github/ModusCreateOrg/budgeting/badge.svg)](https://coveralls.io/github/ModusCreateOrg/budgeting)
-[![Maintainability](https://api.codeclimate.com/v1/badges/22f9a5e29c1c4df3d3bf/maintainability)](https://codeclimate.com/github/ModusCreateOrg/budgeting/maintainability)
-[![Powered by Modus_Create](https://img.shields.io/badge/powered_by-Modus_Create-blue.svg?longCache=true&style=flat&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIwIDMwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNOTguODI0IDE0OS40OThjMCAxMi41Ny0yLjM1NiAyNC41ODItNi42MzcgMzUuNjM3LTQ5LjEtMjQuODEtODIuNzc1LTc1LjY5Mi04Mi43NzUtMTM0LjQ2IDAtMTcuNzgyIDMuMDkxLTM0LjgzOCA4Ljc0OS01MC42NzVhMTQ5LjUzNSAxNDkuNTM1IDAgMCAxIDQxLjEyNCAxMS4wNDYgMTA3Ljg3NyAxMDcuODc3IDAgMCAwLTcuNTIgMzkuNjI4YzAgMzYuODQyIDE4LjQyMyA2OS4zNiA0Ni41NDQgODguOTAzLjMyNiAzLjI2NS41MTUgNi41Ny41MTUgOS45MjF6TTY3LjgyIDE1LjAxOGM0OS4xIDI0LjgxMSA4Mi43NjggNzUuNzExIDgyLjc2OCAxMzQuNDggMCA4My4xNjgtNjcuNDIgMTUwLjU4OC0xNTAuNTg4IDE1MC41ODh2LTQyLjM1M2M1OS43NzggMCAxMDguMjM1LTQ4LjQ1OSAxMDguMjM1LTEwOC4yMzUgMC0zNi44NS0xOC40My02OS4zOC00Ni41NjItODguOTI3YTk5Ljk0OSA5OS45NDkgMCAwIDEtLjQ5Ny05Ljg5NyA5OC41MTIgOTguNTEyIDAgMCAxIDYuNjQ0LTM1LjY1NnptMTU1LjI5MiAxODIuNzE4YzE3LjczNyAzNS41NTggNTQuNDUgNTkuOTk3IDk2Ljg4OCA1OS45OTd2NDIuMzUzYy02MS45NTUgMC0xMTUuMTYyLTM3LjQyLTEzOC4yOC05MC44ODZhMTU4LjgxMSAxNTguODExIDAgMCAwIDQxLjM5Mi0xMS40NjR6bS0xMC4yNi02My41ODlhOTguMjMyIDk4LjIzMiAwIDAgMS00My40MjggMTQuODg5QzE2OS42NTQgNzIuMjI0IDIyNy4zOSA4Ljk1IDMwMS44NDUuMDAzYzQuNzAxIDEzLjE1MiA3LjU5MyAyNy4xNiA4LjQ1IDQxLjcxNC01MC4xMzMgNC40Ni05MC40MzMgNDMuMDgtOTcuNDQzIDkyLjQzem01NC4yNzgtNjguMTA1YzEyLjc5NC04LjEyNyAyNy41NjctMTMuNDA3IDQzLjQ1Mi0xNC45MTEtLjI0NyA4Mi45NTctNjcuNTY3IDE1MC4xMzItMTUwLjU4MiAxNTAuMTMyLTIuODQ2IDAtNS42NzMtLjA4OC04LjQ4LS4yNDNhMTU5LjM3OCAxNTkuMzc4IDAgMCAwIDguMTk4LTQyLjExOGMuMDk0IDAgLjE4Ny4wMDguMjgyLjAwOCA1NC41NTcgMCA5OS42NjUtNDAuMzczIDEwNy4xMy05Mi44Njh6IiBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+)](https://moduscreate.com)
+# Modus Create
 
-# Budgeting :: A Modern React, Redux, React Router 4, Webpack Sample App
+## Test Plan
 
-![React, Redux, Router, Webpack, Sass](https://cloud.githubusercontent.com/assets/733074/25338311/193a1a40-28ff-11e7-8f22-9a5d9dac7b84.png)
+### 1. Application Under Test
 
-Production-ready React + Webpack architecture implemented on consumer web apps of some of the most successful enterprises in the world. Perceived performance and development experience are key factors in this setup. You can use this code base for learning or to scaffold your mission-critical project.
-
-[See live demo](https://budget.modus.app/).
-
-![React Budgeting App](https://cloud.githubusercontent.com/assets/733074/25340900/6ab1d536-2907-11e7-8083-b78f8ae601b4.png)
-
-## Budgeting Application
-
-This is a simple budget management application. It tracks inflow and outflow, shows remaining budget, and interesting reports with charts. As such, it offers more features than the usual Todo App.
+The application under test is a simple budget management application called Budgeting Application. It tracks inflow and outflow, shows remaining budget, and interesting reports with charts. As such, it offers more features than the usual Todo App.
 
 Budgeting app is a showcase project that demonstrates important decisions in architecture and development of a modern React application.
 
-Feel free to use it as a reference app or a starter kit.
+### 2. Scope
 
-## Key concepts:
+This test plan aims to test and validate the Budgeting Application through functional tests that will simulate the user behavior. To be able to achieve the goal of the test plan, end-to-end tests will be described and implemented in the test automation.
 
-- [x] [Webpack 4 Tree shaking](http://moduscreate.com/webpack-2-tree-shaking-configuration/)
-- [x] [PRPL pattern](https://www.slideshare.net/grgur/prpl-pattern-with-webpack-and-react) with minimal application core
-- [x] Automatic code splitting with React Router 4 and `import()` statement
-- [x] Automatic common chunk bundling
-- [x] CSS modules
-- [x] Snapshot testing with Jest
-- [x] Flow static typing. Check out this [guide to using Flow in the project](https://github.com/ModusCreateOrg/budgeting-sample-app-webpack2/blob/master/docs/flow.md).
-- [x] Performance budgets in Webpack 3
-- [x] React 16 Error Boundaries
+### 3. Out of scope
 
-## Performance
+Other types of tests like unit tests, performance tests and integration tests are out of scope.
 
-![Budgeting App Performance](https://cloud.githubusercontent.com/assets/733074/25339194/1af94448-2902-11e7-8982-c1a9b647fac0.png)
-_The app loads in 1 second on 3G, cache disabled_
+### 4. Test Scenarios
 
-Budgeting app is **blazing fast**, thanks to the smart architecture and Webpack 3 configuration. It takes about 1000ms (1s) to load on 3G (see above).
+#### 4.1 Positive Test Scenarios
 
-![Alex Russel Test](https://cloud.githubusercontent.com/assets/733074/25586449/acf14628-2e9f-11e7-8839-2f7c20809581.png)
-_Emerging Markets 3G Filmstrip_
+##### Scenario 1: Verify initial page elements on Budget Page
 
-The [aggressive test](https://www.webpagetest.org/video/compare.php?tests=170501_0S_XQ5-r:2-c:0) above shows the budgeting app loads in under 5 seconds. It's a heavily limited connection that accounts for poor connectivity and limited bandwidth.
+Given I navigate to Budget page
+Then I should see buttons "Budget" and "Reports" at the top of the page
+And I should see Budget Table
+And I should see Working Balance container
 
-![Waterfall](https://cloud.githubusercontent.com/assets/733074/25586623/676a378a-2ea0-11e7-9342-c040751b6ec6.png)
+##### Scenario 2: Verify that user can add a new expense entry
 
-All important (aka critical path) assets are loaded as early as possible, while the others (e.g. images or GitHub buttons) will load after the first render.
+Given I navigate to Budget page
+When I add a new expense entry
+Then I should see the new expense added to the Budget table
+And I should see the Working Balance and Total Outflow amount updated
 
-#### How did we get that performance?
+##### Scenario 3: Verify each new expense added will automatically be a negative value
 
-1.  **Minimal application core.** We decided to ditch the usual convention of creating a vendor chunk. Instead, it's bundled in the app core. The app core is actually very small, containing just the code needed to bootstrap the app.
-2.  **Common code is a chunk.** We let Webpack figure out which bundles we reuse in chunks and create a common chunk that's also asyncronous.
-3.  **Redux module injection**. Each chunk contains respective views _and_ redux modules. Yes, that means reducers, action creators, actions - are all dynamically injected as we navigate through routes. That adds to the _minimal application core_ concept and PRPL pattern.
-4.  **H2 Push.** The app is hosted on Firebase and we use the magic of _HTTP2 Push_ to push some of the scripts before they are requested.
-5.  **Pre-caching**. Service Workers pre-cache resources so the browser can access them as soon as the user needs to.
+Given I navigate to Budget page
+When I add a new expense entry with negative value
+Then I should see a negative value for that entry in the Budget table
+When I add a new expense entry with positive value
+Then I should see a negative value for that entry in the Budget table
 
-## Charts
+##### Scenario 4: Verify that user can add a new income entry
 
-Charts are developed using the awesome D3 library. The idea behind showing charts is not only to show beautiful content, but also to demonstrate keeping heavy content in a chunk that owns it. In other words - we show how applications can run fast even if they use larger libraries.
+Given I navigate to Budget page
+When I add a new income entry
+Then I should see the new income added to the Budget table
+And I should see the Working Balance and Total Inflow amount updated
 
-D3 is used in the `/reports` route only. Given that major routes are separate chunks (code splitting FTW!), the entire D3 library is bundled with the code that needs it. That makes the `/reports` route a bit heavier than the initial `/budget` route, but it also makes routes much faster to load.
+##### Scenario 5: Verify each new income added will automatically be a positive value
 
-## Performance Budgets
+Given I navigate to Budget page
+When I add a new income entry with negative value
+Then I should see a positive value for that entry in the Budget table
+When I add a new income entry with positive value
+Then I should see a positive value for that entry in the Budget table
 
-We are looking to maintain the lightest possible application core (_aka entry chunk_). Our target is 300kB for the entrypoint and 300kB for all other assets. This is how we set it in [webpack configuration](https://github.com/ModusCreateOrg/budgeting-sample-app-webpack2/blob/master/webpack.config.js):
+##### Scenario 6: Verify that the calculation of the Total Inflow, Total Outflow and Working Balance are correct
 
-```js
-performance: {
-  maxAssetSize: 300000,
-  maxEntrypointSize: 300000,
-  hints: 'warning',
-},
+Given I navigate to Budget page
+When I add a new income entry
+And I add a new expense entry
+Then I should see the Total Inflow as the sum of all incomes on the Budget table
+And I should see the Total Outflow as the sum of all expenses on the Budget table
+And I should see the Working Balance as the result of Total Inflow minus Total Outflow
+
+##### Scenario 7: Delete an existing entry
+
+Given I navigate to Budget page
+When I add a new income entry
+Then I should see the new income added to the Budget table
+When I select any entry on the Budget table
+And I delete the selected entry
+Then I should not see that entry on the Budget table
+
+##### Scenario 8: Update an existing entry
+
+Given I navigate to Budget page
+When I add a new income entry
+Then I should see the new income added to the Budget table
+When I select any entry on the Budget table
+And I update the description on the selected entry
+Then I should see that entry with updated description on the Budget table
+
+##### Scenario 9: Verify initial page elements on Reports Page
+
+Given I navigate to Reports page
+Then I should see buttons "Budget" and "Reports" at the top of the page
+And I should see "Inflow vs Outflow" and "Spending by Category" tabs
+When I select "Inflow vs Outflow" tab
+Then I should see a graph
+When I select "Spending by Category" tab
+Then I should see a graph
+
+##### Scenario 10: Verify that "Inflow vs Outflow" graph is displaying the correct values and expenses distribution
+
+Given I navigate to Reports page
+When I select "Inflow vs Outflow" tab
+Then I should see a graph with "Inflow" and "Outflow" columns
+And the "Inflow" column should have the same amount as the Total Inflow in the Budget page
+And the "Outflow" column should have the same amount as the Total Outflow in the Budget page
+And the "Categories" listed should be the same as the ones in the Budget page
+
+##### Scenario 11: Verify that "Spending by Category" graph is displaying the correct values and expenses distribution
+
+Given I navigate to Reports page
+When I select "Spending by Category" tab
+Then I should see a graph with expenses categories
+And I should see that each category have the same amount listed in the Budget page
+
+#### 4.2 Negative Test Scenarios
+
+##### Scenario 1: Verify that alphanumeric values cannot be added into value field
+
+Given I navigate to Budget page
+When I try to add a new income entry with alphanumeric values on "value" field
+Then I should not be able to add this entry
+
+##### Scenario 2: Verify that user can't add a new entry with empty value
+
+Given I navigate to Budget page
+When I try to add a new income entry with "value" field empty
+Then I should not be able to add this entry
+
+##### Scenario 3: Verify that user can't add a new income with negative value
+
+Given I navigate to Budget page
+When I try to add a new income entry with a negative number on "value" field
+Then I should see the new income added to the Budget table with positive value
+
+##### Scenario 4: Verify that user can't add a new expense with positive value
+
+Given I navigate to Budget page
+When I try to add a new expense entry with a positive number on "value" field
+Then I should see the new expense added to the Budget table with negative value
+
+##### Scenario 5: Verify that user can't edit the Total Inflow, Total Outflow and Working Balance fields
+
+Given I navigate to Budget page
+When I try to edit the fields "Total Inflow", "Total Outflow" and "Working Balance"
+Then I should not be able to change the values on it
+
+## Javascript Test Automation
+
+### 1. Cypress test automation
+
+The test automation suite was developed with Cypress. A total of 4 test cases were implemented.
+
+All the Cypress files are inside folder `./e2e/cypress`
+
+The feature file with all the test cases can be found in: `./integration/BudgetPage.feature`
+
+The step definitions can be found in: `./support/step_definition/BudgetPage.js` and `./support/step_definition/Navigation.js`
+
+The following tests are passing:
+
+```
+Scenario: Verify initial page elements on Budget Page
+Scenario: Verify that user can add a new expense entry
+Scenario: Verify each new expense added will automatically be a negative value
 ```
 
-Adding lots of extra code to the entry chunk might cause the build (`npm run build`) process to show a warning.
+And the following test case is intended to fail, as required in the task description.
 
-![Performance Budgets](https://cloud.githubusercontent.com/assets/733074/25352700/3ade5cfa-292d-11e7-8d2e-fed88c2c4da0.png)
+```
+Scenario: Verify that user can add a new income entry
+```
 
-_Simulated size warning_
+### 2. Cucumber
 
-Note that running webpack dev server in production mode (`npm run prod`) will trigger this warning because of the additional dev server code injected in the app. This code will not show in regular production builds.
+As part of the task description, this test automation was developed with [Cucumber](https://cucumber.io/). Cucumber is a software tool that supports behavior-driven development (BDD).
+
+In order to achieve that, this repo uses [cypress-cucumber-processor](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor), which is a plugin for Cypress.
+
+### 3. Installation and Execution
+
+1.  Install all dependencies:
+    `npm install`
+
+2.  Build the app:
+    `npm run build`
+
+3.  Serve the app on [localhost:8000](http://localhost:8000)
+    `npm run prod`
+
+4.  Use another terminal to run Cypress test automation.
+
+    - To open Cypress Desktop App:
+    `npm run test:e2e`
+
+    - To run Cypress tests in Chrome:
+    `npm run test:e2e:chrome`
+
+    - To run Cypress tests in Firefox:
+    `npm run test:e2e:firefox`
+
+    - To run Cypress in headless mode:
+    `npm run test:e2e:headless`
 
 ## Service Workers
 
 Service workers are enabled only when serving static files, not through webpack-dev-server. Here's how you can test service worker functionality:
 
 1.  Run `npm run build` to build the app
-2.  Run `npm run prod` to serve the app on [localhost:3000](http://localhost:3000)
-3.  Run a new instance of Chrome with disabled security (because localhost is not on https):
+2.  Run `npm run prod` to serve the app on [localhost:8000](http://localhost:8000)
 
-**OS X**
+## Execute E2E tests
 
-```bash
-open -a "Google Chrome" --args --user-data-dir=/tmp/unsafe --unsafely-treat-insecure-origin-as-secure=http://localhost
-```
+- To open Cypress Desktop App:
+  `npm run test:e2e`
 
-**Linux**
+- To run Cypress tests in Chrome:
+  `npm run test:e2e:chrome`
 
-```bash
-/path/to/chrome --user-data-dir=/tmp/unsafe --unsafely-treat-insecure-origin-as-secure=http://localhost
-```
+- To run Cypress tests in Firefox:
+  `npm run test:e2e:firefox`
 
-**Windows**
-
-```bash
-chrome.exe --user-data-dir=c:\temp --unsafely-treat-insecure-origin-as-secure=http://localhost
-```
-
-4.  Now you can observe network traffic in the Network tab or SW activity in Application > Service Workers in Developer Tools
-
-## Stack
-
-The app was built using these aweseome technologies
-
-- [x] [Webpack 4](https://webpack.js.org)
-- [x] [React 16.x](https://facebook.github.io/react/)
-- [x] [Redux 3.x](http://redux.js.org/)
-- [x] [React Router 4](https://reacttraining.com/react-router/)
-- [x] [Reselect](https://github.com/reactjs/reselect/)
-- [x] [Babel](https://babeljs.io/)
-- [x] [Prettier](https://github.com/prettier/prettier)
-- [x] [Jest](https://facebook.github.io/jest/)
-- [x] [Flow](https://flow.org/en/)
-- [x] [Ducks](https://github.com/erikras/ducks-modular-redux/) 🐣
-- [x] [Sass](http://sass-lang.com/)
-- [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
-- [x] [D3 5.x](https://d3js.org/)
-
-## NPM Scripts
-
-- `npm install` - install dependencies
-- `npm start` - run development server
-- `npm run prod` - run production server
-- `npm run build` - build app for deployment
-- `npm run serve` - serve previously built app using pushstate server
-- `npm run lint` - lint check
-- `npm run lint:fix` - lint check + autofixes + prettify code with **prettier**
-- `npm test` - run test suite
-- `npm run test:fix` - run test suite watching files for changes
-- `npm run flow` - run flow type checking
-- `npm run update-types` - update flow library definitions
-
-## Honorary Mentions
-
-- Thanks to [React experts at Modus Create](https://moduscreate.com), particularly [Tim Eagan](https://twitter.com/TimothyEagan), [Jason Malfatto](https://twitter.com/jmalfatto), [Brice Mason](https://twitter.com/bricemason), and [Esteban Las](https://twitter.com/elas78) for infinite amounts of experience poured into this app
-- Kudos to [Andrea Grisogono](https://twitter.com/scrumolina) who Scrumorganized the team
-- Thanks to community contributors who helped with code and screamed about issues. Yeah, we really do appreciate all the screaming.
-- [Addy Osmani](https://twitter.com/addyosmani) and [Sam Saccone](https://twitter.com/samccone) who helped with the PRPL pattern
-- [Sean T Larkin](https://twitter.com/thelarkinn) who helped with Webpack wizardry
-
-## Want more?
-
-This project is maintained by [Modus Create](https://moduscreate.com). Fantastic React apps are in our DNA so give us a buzz if we can help with your awesome project.
-
-## License
-
-[MIT](License.md)
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FModusCreateOrg%2Fbudgeting-sample-app-webpack2.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FModusCreateOrg%2Fbudgeting-sample-app-webpack2?ref=badge_large)
+- To run Cypress in headless mode:
+  `npm run test:e2e:headless`
